@@ -72,34 +72,88 @@
                 </div>
               </div>
               <div class="user-info">
-                <p class="mb-0 text-white">@designing-world</p>
-                <h5 class="mb-0">Suha Jannat</h5>
+                <p class="mb-0 text-white">{{ Auth::user()->email}}</p>
+                <h5 class="mb-0">{{ Auth::user()->name}}</h5>
               </div>
             </div>
           </div>
-          <!-- User Meta Data-->
+          <!-- profil pribadi-->
+          <div class="card user-data-card">
+            <div class="card-body">
+              <form action="{{ url ('post-profil-pribadi') }}" method="post">
+                @csrf
+                <div class="mb-3">
+                  <div class="title mb-2"><span>NIK</span></div>
+                  <input class="form-control" type="number" name="nik" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Nama Lengkap</span></div>
+                  <input class="form-control" type="text" name="nama_lengkap" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Nomor Telp</span></div>
+                  <input class="form-control" type="tel" name="no_hp" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Jenis Kelamin</span></div>
+                  <input class="form-control" type="text" name="jenis_kelamin" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Tanggal Lahir</span></div>
+                  <input class="form-control" type="date"name="tanggal_lahir" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Tinggi Badan</span></div>
+                  <input class="form-control" type="number" name="tinggi_badan" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Berat Badan</span></div>
+                  <input class="form-control" type="number" name="berat_badan" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Alamat Lengkap</span></div>
+                  <input class="form-control" type="text" name="alamat" value="">
+                </div>
+                <button class="btn btn-success w-100" type="submit">Save All Changes</button>
+              </form>
+            </div>
+          </div>
+          <br>
+          <!-- form profile detail -->
           <div class="card user-data-card">
             <div class="card-body">
               <form action="" method="">
                 <div class="mb-3">
-                  <div class="title mb-2"><i class="lni lni-user"></i><span>Username</span></div>
-                  <input class="form-control" type="text" value="designing-world">
+                  <div class="title mb-2"><span>Tentang Saya</span></div>
+                  <input class="form-control" type="text" value="">
                 </div>
                 <div class="mb-3">
-                  <div class="title mb-2"><i class="lni lni-user"></i><span>Full Name</span></div>
-                  <input class="form-control" type="text" value="Suha Jannat">
+                  <div class="title mb-2"><span>Pendidikan Terakhir</span></div>
+                  <input class="form-control" type="text" value="">
                 </div>
                 <div class="mb-3">
-                  <div class="title mb-2"><i class="lni lni-phone"></i><span>Phone</span></div>
-                  <input class="form-control" type="text" value="+880 000 111 222">
+                  <div class="title mb-2"><span>Alumni</span></div>
+                  <input class="form-control" type="text" value="">
                 </div>
                 <div class="mb-3">
-                  <div class="title mb-2"><i class="lni lni-envelope"></i><span>Email Address</span></div>
-                  <input class="form-control" type="email" value="care@example.com">
+                  <div class="title mb-2"><span>Bahasa</span></div>
+                  <input class="form-control" type="text" value="">
                 </div>
                 <div class="mb-3">
-                  <div class="title mb-2"><i class="lni lni-map-marker"></i><span>Shipping Address</span></div>
-                  <input class="form-control" type="text" value="28/C Green Road, BD">
+                  <div class="title mb-2"><span>Keahlian</span></div>
+                  <input class="form-control" type="text" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Pengalaman Kerja</span></div>
+                  <input class="form-control" type="text" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Sosial Media</span></div>
+                  <input class="form-control" type="text" value="">
+                </div>
+                <div class="mb-3">
+                  <div class="title mb-2"><span>Hobi</span></div>
+                  <input class="form-control" type="text" value="">
                 </div>
                 <button class="btn btn-success w-100" type="submit">Save All Changes</button>
               </form>

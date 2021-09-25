@@ -149,6 +149,26 @@ class ForClientController extends Controller
     return view('suha.profile',compact('profile'));
    }
 
+   public function post_profil_pribadi(Request $request){
+    //    return $request->all();
+    $profil_pribadi = DB::table('profil_pribadi')->where('id_user',Auth::user()->id)->first();
+       if ($profil_pribadi == null) {
+            $store_profil_pribadi = DB::table('profil_pribadi')->insert([
+                'nik' => $request->nik,
+                'nama_lengkap' => $request->nama_lengkap,
+                'no_hp' => $request->no_hp,
+                'alamat' => $request->alamat,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'jenis_kelamin' => $request->jenis_kelamin,
+                'tinggi_badan' => $request->tinggi_badan,
+                'berat_badan' => $request->berat_badan,
+                'id_user' => Auth::user()->id,
+            ]);
+            
+            return redirect ('/profile');
+       }
+   }
+
    public function settings(){
     return view('suha.settings');
    }

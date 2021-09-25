@@ -65,6 +65,7 @@ Route::get('/checkout','Suha\ForClientController@checkout');
 Route::get('/contact','Suha\ForClientController@contact');
 
 Route::get('/edit-profile','Suha\ForClientController@edit_profile');
+Route::post('/post-profil-pribadi','Suha\ForClientController@post_profil_pribadi');
 
 Route::get('/featured-products', 'Suha\ForClientController@/featured_products');
 
