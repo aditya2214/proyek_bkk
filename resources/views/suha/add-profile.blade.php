@@ -80,67 +80,67 @@
           <!-- profil pribadi-->
           <div class="card user-data-card">
             <div class="card-body">
-              <form action="{{ url ('edit-profil-pribadi/'.$profil_base->id) }}" method="post">
+              <form action="{{ url ('post-profil-pribadi') }}" method="post">
                 @csrf
                 <div class="mb-3">
                   <div class="title mb-2"><span>NIK</span></div>
-                  <input class="form-control" type="number" name="nik" value="{{$profil_base->nik}}">
+                  <input class="form-control" type="number" name="nik" required value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Nama Lengkap</span></div>
-                  <input class="form-control" type="text" name="nama_lengkap" value="{{$profil_base->nama_lengkap}}">
+                  <input class="form-control" type="text" name="nama_lengkap" required value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Nomor Telp</span></div>
-                  <input class="form-control" type="tel" name="no_hp" value="{{$profil_base->no_hp}}">
+                  <input class="form-control" type="tel" name="no_hp" required value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Jenis Kelamin</span></div>
-                      <input class="form-control" type="text" name="jenis_kelamin" value="{{$profil_base->jenis_kelamin}}">
+                  <input class="form-control" type="text" name="jenis_kelamin" required value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Tanggal Lahir</span></div>
-                  <input class="form-control" type="date"name="tanggal_lahir" value="{{$profil_base->tanggal_lahir}}">
+                  <input class="form-control" type="date"name="tanggal_lahir" required value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Tinggi Badan</span></div>
-                  <input class="form-control" type="number" name="tinggi_badan" value="{{$profil_base->tinggi_badan}}">
+                  <input class="form-control" type="number" name="tinggi_badan" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Berat Badan</span></div>
-                  <input class="form-control" type="number" name="berat_badan" value="{{$profil_base->berat_badan}}">
+                  <input class="form-control" type="number" name="berat_badan" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Alamat Lengkap</span></div>
-                  <input class="form-control" type="text" name="alamat" value="{{$profil_base->alamat}}">
+                  <input class="form-control" type="text" name="alamat" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Pendidikan Terakhir</span></div>
-                  <input class="form-control" type="text" name="pendidikan_terakhir" value="{{$profil_base->pendidikan_terakhir}}">
+                  <input class="form-control" type="text" name="pendidikan_terakhir" required value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Alumni</span></div>
-                  <input class="form-control" type="text" name="alumni" value="{{$profil_base->alumni}}">
+                  <input class="form-control" type="text" name="alumni" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Bahasa</span></div>
-                  <input class="form-control" type="text" name="bahasa" value="{{$profil_base->bahasa}}">
+                  <input class="form-control" type="text" name="bahasa" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Keahlian</span></div>
-                  <input class="form-control" type="text" name="keahlian" value="{{$profil_base->keahlian}}">
+                  <input class="form-control" type="text" name="keahlian" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Pengalaman Kerja</span></div>
-                  <input class="form-control" type="text" name="pengalaman" value="{{$profil_base->pengalaman}}">
+                  <input class="form-control" type="text" name="pengalaman" value="">
                 </div>
                 <div class="mb-3">
-                  <div class="title mb-2"><span>Media Sosial</span></div>
-                  <input class="form-control" type="text" name="media_sosial" value="{{$profil_base->media_sosial}}">
+                  <div class="title mb-2"><span>Sosial Media</span></div>
+                  <input class="form-control" type="text" name="media_sosial" value="">
                 </div>
                 <div class="mb-3">
                   <div class="title mb-2"><span>Hobi</span></div>
-                  <input class="form-control" type="text" name="hobi" value="{{$profil_base->hobi}}">
+                  <input class="form-control" type="text" name="hobi" value="">
                 </div>
                 <button class="btn btn-success w-100" type="submit">Save All Changes</button>
               </form>

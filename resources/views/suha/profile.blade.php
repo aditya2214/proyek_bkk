@@ -43,89 +43,80 @@
             </div>
           </div>
           <!-- User Meta Data-->
-          @foreach($profile as $profil)
+          
           <div class="card user-data-card">
             <div class="card-body">
+              @if($profile == null)
+              <div class="edit-profile-btn mt-3"><a class="btn btn-info w-100" href="{{ url ('edit-profile') }}"><i class="lni lni-pencil me-2"></i>Add Profile</a></div>
+              @else
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-user"></i><span>Username</span></div>
                 <div class="data-content">{{ Auth::user()->email}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-user"></i><span>Full Name</span></div>
-                <div class="data-content">{{ Auth::user()->name}}</div>
+                <div class="data-content">{{$profile->nama_lengkap}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-phone"></i><span>Phone</span></div>
-                <div class="data-content">{{ $profil->no_hp}}</div>
+                <div class="data-content">{{ $profile->no_hp}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i  class="lni lni-map-marker"></i><span>Address</span></div>
-                <div class="data-content">{{ $profil->alamat}}                                </div>
+                <div class="data-content">{{ $profile->alamat}}                                </div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-slim"></i><span>Jenis kelamin</span></div>
-                <div class="data-content">{{ $profil->jenis_kelamin}}</div>
+                <div class="data-content">{{ $profile->jenis_kelamin}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-calendar"></i><span>Tanggal Lahir</span></div>
-                <div class="data-content">{{ $profil->tanggal_lahir }}</div>
+                <div class="data-content">{{ $profile->tanggal_lahir }}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-zoom-in"></i><span>Tinggi Badan</span></div>
-                <div class="data-content">{{ $profil->tinggi_badan }}</div>
+                <div class="data-content">{{ $profile->tinggi_badan }}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-weight"></i><span>Berat Badan</span></div>
-                <div class="data-content">{{ $profil->berat_badan }}</div>
+                <div class="data-content">{{ $profile->berat_badan }}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-map-marker"></i><span>Alamat Lengkap</span></div>
-                <div class="data-content">{{ $profil->alamat }}</div>
-              </div>
-
-              <!-- Edit Profile-->
-              <div class="edit-profile-btn mt-3"><a class="btn btn-info w-100" href="{{ url ('edit-profile') }}"><i class="lni lni-pencil me-2"></i>Edit Profile</a></div>
-            </div>
-          </div>
-          @endforeach
-          <br>
-          <div class="card user-data-card">
-            <div class="card-body">
-              <div class="single-profile-data d-flex align-items-center justify-content-between">
-                <div class="title d-flex align-items-center"><i class="lni lni-pencil-alt"></i></i><span>Tentang Saya</span></div>
-                <div class="data-content"></div>
+                <div class="data-content">{{ $profile->alamat }}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-graduation"></i><span>Pendidikan</span></div>
-                <div class="data-content"></div>
+                <div class="data-content">{{$profile->pendidikan_terakhir}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-eraser"></i><span>Alumni</span></div>
-                <div class="data-content"></div>
+                <div class="data-content">{{$profile->alumni}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-slack"></i><span>Bahasa</span></div>
-                <div class="data-content"></div>
+                <div class="data-content">{{$profile->bahasa}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-ruler-pencil"></i><span>Keahlian</span></div>
-                <div class="data-content"></div>
+                <div class="data-content">{{$profile->keahlian}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-radio-button"></i><span>Pengalaman Kerja</span></div>
-                <div class="data-content"></div>
+                <div class="data-content">{{$profile->pengalaman}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
-                <div class="title d-flex align-items-center"><i class="lni lni-world"></i><span>Sosial Media</span></div>
-                <div class="data-content"></div>
+                <div class="title d-flex align-items-center"><i class="lni lni-world"></i><span>Media Sosial</span></div>
+                <div class="data-content">{{$profile->media_sosial}}</div>
               </div>
               <div class="single-profile-data d-flex align-items-center justify-content-between">
                 <div class="title d-flex align-items-center"><i class="lni lni-star-filled"></i><span>Hobi</span></div>
-                <div class="data-content">{{ $profil->tinggi_badan }}</div>
+                <div class="data-content">{{$profile->hobi}}</div>
               </div>
 
               <!-- Edit Profile-->
               <div class="edit-profile-btn mt-3"><a class="btn btn-info w-100" href="{{ url ('edit-profile') }}"><i class="lni lni-pencil me-2"></i>Edit Profile</a></div>
+              @endif
             </div>
           </div>
         </div>

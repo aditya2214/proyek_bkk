@@ -71,7 +71,14 @@ class ForClientController extends Controller
    }
 
    public function edit_profile(){
-    return view('suha.edit-profile');
+    $profil_pribadi = DB::table('profil_pribadi')->where('id_user',Auth::user()->id)->first();
+    if ($profil_pribadi == null) {
+        return view('suha.add-profile');
+    } else {
+        $profil_base = DB::table('profil_pribadi')->where('id_user',Auth::user()->id)->first();
+
+        return view('suha.edit-profile',compact('profil_base'));
+    }
    }
 
    public function featured_products(){
@@ -139,12 +146,7 @@ class ForClientController extends Controller
    }
 
    public function profile(){
-    $profile = DB::table('users')
-            ->leftjoin('profil_pribadi','users.id', '=', 'profil_pribadi.id_user')
-            ->leftjoin('profil_detail','profil_pribadi.id','=','profil_detail.id_profil_pribadi')
-            ->select('users.*','profil_pribadi.*','profil_detail.*')
-            ->where('users.id',Auth::user()->id)
-            ->get();
+    $profile = DB::table('profil_pribadi')->where('id_user',Auth::user()->id)->first();
         // return $profile;
     return view('suha.profile',compact('profile'));
    }
@@ -163,9 +165,47 @@ class ForClientController extends Controller
                 'tinggi_badan' => $request->tinggi_badan,
                 'berat_badan' => $request->berat_badan,
                 'id_user' => Auth::user()->id,
+                'pendidikan_terakhir' => $request->pendidikan_terakhir,
+                'alumni' => $request->alumni,
+                'bahasa' => $request->bahasa,
+                'keahlian' => $request->keahlian,
+                'pengalaman' => $request->pengalaman,
+                'media_sosial' => $request->media_sosial,
+                'hobi' => $request->hobi,
             ]);
             
             return redirect ('/profile');
+       }else {
+
+       }
+   }
+
+   public function edit_profil_pribadi(Request $request ,$id){
+    //    return $request->all();
+    $profil_pribadi = DB::table('profil_pribadi')->where('id_user',Auth::user()->id)->first();
+       if ($profil_pribadi != null) {
+            $store_profil_pribadi = DB::table('profil_pribadi')->where('id',$id)->update([
+                'nik' => $request->nik,
+                'nama_lengkap' => $request->nama_lengkap,
+                'no_hp' => $request->no_hp,
+                'alamat' => $request->alamat,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'jenis_kelamin' => $request->jenis_kelamin,
+                'tinggi_badan' => $request->tinggi_badan,
+                'berat_badan' => $request->berat_badan,
+                'id_user' => Auth::user()->id,
+                'pendidikan_terakhir' => $request->pendidikan_terakhir,
+                'alumni' => $request->alumni,
+                'bahasa' => $request->bahasa,
+                'keahlian' => $request->keahlian,
+                'pengalaman' => $request->pengalaman,
+                'media_sosial' => $request->media_sosial,
+                'hobi' => $request->hobi,
+            ]);
+            
+            return redirect ('/profile');
+       }else {
+        
        }
    }
 
