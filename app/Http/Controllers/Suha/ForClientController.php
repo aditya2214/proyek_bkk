@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
+use Alert;
 
 
 class ForClientController extends Controller
@@ -75,6 +76,9 @@ class ForClientController extends Controller
    public function daftar($id){
        if (Auth::user() == null) {
            return redirect('/login');
+       }elseif(Auth::user()->role > 0){
+        Alert::error('Uups', 'Anda Menggunakan Akun Admin');
+        return back();
        }else{
 
            $loker = DB::table('header_loker')->where('id',$id)->first();
@@ -90,8 +94,8 @@ class ForClientController extends Controller
                 'status' => 0
             ]);
 
-            return view('suha.terimakasih');
-        }
+            Alert::success('Berhasil', 'Pendaftaran telah berhasil');
+            return back();        }
    }
    
    public function edit_profile(){
@@ -247,7 +251,7 @@ class ForClientController extends Controller
 
    public function single_product($id){
     $loker = DB::table('header_loker')->where('id',$id)->first();
-
+    
     return view('suha.single-product',compact('loker'));
    }
 

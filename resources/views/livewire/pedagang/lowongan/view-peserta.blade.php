@@ -11,16 +11,17 @@
         <div class="card-body">
             <p>Lowongan Kerja</p>
             <p><b>
-                @foreach($data_peserta as $dp)
+                @foreach($lokers as $dp)
                     {{$dp->basic}}
                 @endforeach
-            </b></p>
+            </b></p> 
             <br>
             <table class="table">
                 <thead>
                     <tr>
+                        <th>No</th>
                         <th>Email</th>
-                        <th>Nama Calon</th>
+                        <th>Nama Pelamar</th>
                         <th>Tanggal Lahir</th>
                         <th>Pendidikan</th>
                         <th>Berat Badan</th>
@@ -29,6 +30,20 @@
                         <th>Aksi</th>
                     </tr>
                 </thead>
+                <tbody>
+                    @foreach($daftar_peserta as $key => $daftar_p)
+                    <tr>
+                        <td>{{$key+1}}</td>
+                        <td>{{$daftar_p->email}}</td>
+                        <td>{{$daftar_p->nama_lengkap}}</td>
+                        <td>{{$daftar_p->tanggal_lahir}}</td>
+                        <td>{{$daftar_p->pendidikan_terakhir}}</td>
+                        <td>{{$daftar_p->berat_badan}}</td>
+                        <td>{{$daftar_p->tinggi_badan}}</td>
+                        <td>{{$daftar_p->alamat}}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
         </div>
     </div>

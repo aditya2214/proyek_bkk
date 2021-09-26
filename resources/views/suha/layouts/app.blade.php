@@ -41,6 +41,7 @@
     </div>
     
     @yield('content')
+    @include('sweetalert::alert')
     <!-- All JavaScript Files-->
     
     <script src="{{ asset ('suha/dist/js/bootstrap.bundle.min.js') }}"></script>
