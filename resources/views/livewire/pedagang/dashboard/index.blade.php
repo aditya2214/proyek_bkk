@@ -19,6 +19,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
+                    <livewire:pedagang.dashboard.config-content>
                     @yield('isi')
 
                 </div>

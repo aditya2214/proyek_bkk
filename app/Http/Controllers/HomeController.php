@@ -36,20 +36,16 @@ class HomeController extends Controller
         }    
     }
 
+    public function home_admin(){
 
-    public function produk(){
-        
-        return view('produk');
+        return view('home_admin');
     }
 
-    public function pengguna(){
-        
-        return view('pengguna');
-    }
+    public function view_peserta($id){
+        $data_peserta = DB::table('header_loker')->where('id',$id)->get();
+            // return $data_peserta;
 
-    public function upload_lowongan(){
-
-        return view('upload_lowongan');
+        return view('livewire.pedagang.lowongan.view-peserta',compact('data_peserta'));
     }
 }
 

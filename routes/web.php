@@ -24,8 +24,10 @@ Route::get('/logout', function () {
 Auth::routes();
 
 // for admin
-Route::get('/upload_lowongan', 'HomeController@upload_lowongan')->name('upload_lowongan');
+Route::get('/home_admin', 'HomeController@upload_lowongan')->name('upload_lowongan');
 Route::get('/home_admin', 'HomeController@index')->name('index');
+Route::get('/daftar_peserta/{id}', 'HomeController@view_peserta')->name('view_peserta');
+
 
 // end for admin
 
@@ -104,6 +106,7 @@ Route::get('/otp','Suha\ForClientController@otp');
 Route::get('/pages','Suha\ForClientController@pages');
 
 Route::get('/payment-success', 'Suha\ForClientController@/payment_success');
+
 
 Route::get('/privacy-police','Suha\ForClientController@/privacy_police');
 

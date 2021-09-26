@@ -25,6 +25,7 @@
 <body id="page-top">
 
     <!-- Page Wrapper -->
+    
     <livewire:pedagang.dashboard.index></livewire:pedagang.dashboard.index>
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset ('admin/vendor/jquery/jquery.min.js') }}"></script>
