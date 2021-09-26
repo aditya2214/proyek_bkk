@@ -11,7 +11,9 @@ use Auth;
 class ForClientController extends Controller
 {
    public function home(){
-       return view('suha.home');
+       $lokers = DB::table('header_loker')->where('conf',1)->get();
+
+       return view('suha.home',compact('lokers'));
    }
 
    public function about_us(){

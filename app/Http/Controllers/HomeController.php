@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Auth,DB;
 
 class HomeController extends Controller
 {
@@ -26,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::user()->role == 0) {
-            $view = view('suha.home');
+            $lokers = DB::table('header_loker')->where('conf',1)->get();
+            $view = view('suha.home',compact('lokers'));
             return $view;
         }else{
             $view = view('home');

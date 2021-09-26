@@ -169,199 +169,31 @@
           <!--a.btn.btn-warning.btn-sm(href="suha/flash-sale') }}") View All-->
         </div>
       </div>
-      <!-- Top Products-->
-      <div class="top-products-area clearfix py-3">
-        <div class="container">
-          <div class="section-heading d-flex align-items-center justify-content-between">
-            <h6>Top Products</h6><a class="btn btn-danger btn-sm" href="{{ url ('shop-grid') }}">View All</a>
-          </div>
-          <div class="row g-3">
-            <!-- Single Top Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card top-product-card">
-                <div class="card-body"><span class="badge badge-success">Sale</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img class="mb-2" src="suha/dist/img/product/11.png" alt=""></a><a class="product-title d-block" href="{{ url ('single-product') }}">Beach Cap</a>
-                  <p class="sale-price">$13<span>$42</span></p>
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <!-- Single Top Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card top-product-card">
-                <div class="card-body"><span class="badge badge-primary">New</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img class="mb-2" src="suha/dist/img/product/5.png" alt=""></a><a class="product-title d-block" href="{{ url ('single-product') }}">Wooden Sofa</a>
-                  <p class="sale-price">$74<span>$99</span></p>
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <!-- Single Top Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card top-product-card">
-                <div class="card-body"><span class="badge badge-success">Sale</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img class="mb-2" src="suha/dist/img/product/6.png" alt=""></a><a class="product-title d-block" href="{{ url ('single-product') }}">Roof Lamp</a>
-                  <p class="sale-price">$99<span>$113</span></p>
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <!-- Single Top Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card top-product-card">
-                <div class="card-body"><span class="badge badge-danger">-15%</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img class="mb-2" src="suha/dist/img/product/9.png" alt=""></a><a class="product-title d-block" href="{{ url ('single-product') }}">Sneaker Shoes</a>
-                  <p class="sale-price">$87<span>$92</span></p>
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <!-- Single Top Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card top-product-card">
-                <div class="card-body"><span class="badge badge-danger">-11%</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img class="mb-2" src="suha/dist/img/product/8.png" alt=""></a><a class="product-title d-block" href="{{ url ('single-product') }}">Wooden Chair</a>
-                  <p class="sale-price">$21<span>$25</span></p>
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <!-- Single Top Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card top-product-card">
-                <div class="card-body"><span class="badge badge-warning">Hot</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img class="mb-2" src="suha/dist/img/product/4.png" alt=""></a><a class="product-title d-block" href="{{ url ('single-product') }}">Polo Shirts</a>
-                  <p class="sale-price">$38<span>$41</span></p>
-                  <div class="product-rating"><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></div><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Cool Facts Area-->
-      <div class="cta-area">
-        <div class="container">
-          <div class="cta-text p-4 p-lg-5" style="background-image: url(suha/dist/img/bg-img/24.jpg)">
-            <h4>Winter Sale 50% Off</h4>
-            <p>Suha is a multipurpose, creative &amp; <br>modern mobile template.</p><a class="btn btn-danger" href="#">Shop Today</a>
-          </div>
-        </div>
-      </div>
+
+      
       <!-- Weekly Best Sellers-->
       <div class="weekly-best-seller-area py-3">
         <div class="container">
           <div class="section-heading d-flex align-items-center justify-content-between">
-            <h6>Weekly Best Sellers</h6><a class="btn btn-success btn-sm" href="{{ url ('shop-list') }}">View All</a>
+            <h6>Info Loker Terbaru</h6>
           </div>
           <div class="row g-3">
             <!-- Single Weekly Product Card-->
+            @foreach($lokers as $loker)
             <div class="col-12 col-md-6">
               <div class="card weekly-product-card">
                 <div class="card-body d-flex align-items-center">
-                  <div class="product-thumbnail-side"><span class="badge badge-success">Sale</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/10.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Modern Red Sofa</a>
-                    <p class="sale-price"><i class="lni lni-dollar"></i>$64<span>$89</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.88 (39)</div><a class="btn btn-danger btn-sm" href="#"><i class="me-1 lni lni-cart"></i>Buy Now</a>
+                  <div class="product-thumbnail-side"><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/download.png" alt=""></a></div>
+                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">{{ $loker->basic}}</a>
+                    <p class="sale-price"><i class="lni lni-home"></i></i>{{$loker->tempat}}</p>
+                    <div class="sale-price"><i class="lni lni-graduation"></i>{{$loker->pendidikan}}</div>
+                    <div class="sale-price"><i class="lni lni-map"></i>{{$loker->lokasi}}</div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Single Weekly Product Card-->
-            <div class="col-12 col-md-6">
-              <div class="card weekly-product-card">
-                <div class="card-body d-flex align-items-center">
-                  <div class="product-thumbnail-side"><span class="badge badge-primary">Sale</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/7.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Office Chair</a>
-                    <p class="sale-price"><i class="lni lni-dollar"></i>$100<span>$160</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.82 (125)</div><a class="btn btn-danger btn-sm" href="#"><i class="me-1 lni lni-cart"></i>Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Single Weekly Product Card-->
-            <div class="col-12 col-md-6">
-              <div class="card weekly-product-card">
-                <div class="card-body d-flex align-items-center">
-                  <div class="product-thumbnail-side"><span class="badge badge-danger">-10%</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/12.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Sun Glasses</a>
-                    <p class="sale-price"><i class="lni lni-dollar"></i>$24<span>$32</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.79 (63)</div><a class="btn btn-danger btn-sm" href="#"><i class="me-1 lni lni-cart"></i>Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Single Weekly Product Card-->
-            <div class="col-12 col-md-6">
-              <div class="card weekly-product-card">
-                <div class="card-body d-flex align-items-center">
-                  <div class="product-thumbnail-side"><span class="badge badge-warning">New</span><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/13.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Wall Clock</a>
-                    <p class="sale-price"><i class="lni lni-dollar"></i>$31<span>$47</span></p>
-                    <div class="product-rating"><i class="lni lni-star-filled"></i>4.99 (7)</div><a class="btn btn-danger btn-sm" href="#"><i class="me-1 lni lni-cart"></i>Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Discount Coupon Card-->
-      <div class="container">
-        <div class="card discount-coupon-card border-0">
-          <div class="card-body">
-            <div class="coupon-text-wrap d-flex align-items-center p-3">
-              <h5 class="text-white pe-3 mb-0">Get 20% <br> discount</h5>
-              <p class="text-white ps-3 mb-0">To get discount, enter the<strong class="px-1">GET20</strong>code on the checkout page.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Featured Products Wrapper-->
-      <div class="featured-products-wrapper py-3">
-        <div class="container">
-          <div class="section-heading d-flex align-items-center justify-content-between">
-            <h6>Featured Products</h6><a class="btn btn-warning btn-sm" href="{{ url ('featured-products') }}">View All</a>
-          </div>
-          <div class="row g-3">
-            <!-- Featured Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card featured-product-card">
-                <div class="card-body"><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
-                  <div class="product-thumbnail-side"><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/14.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Blue Skateboard</a>
-                    <p class="sale-price">$64<span>$89</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Featured Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card featured-product-card">
-                <div class="card-body"><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
-                  <div class="product-thumbnail-side"><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/15.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Travel Bag</a>
-                    <p class="sale-price">$64<span>$89</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Featured Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card featured-product-card">
-                <div class="card-body"><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
-                  <div class="product-thumbnail-side"><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/16.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Cotton T-shirts</a>
-                    <p class="sale-price">$64<span>$89</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Featured Product Card-->
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="card featured-product-card">
-                <div class="card-body"><span class="badge badge-warning custom-badge"><i class="lni lni-star"></i></span>
-                  <div class="product-thumbnail-side"><a class="wishlist-btn" href="#"><i class="lni lni-heart"></i></a><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/product/6.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">Roof Lamp </a>
-                    <p class="sale-price">$64<span>$89</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
+             
           </div>
         </div>
       </div>
