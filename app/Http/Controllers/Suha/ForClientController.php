@@ -72,6 +72,28 @@ class ForClientController extends Controller
     return view('suha.contact');
    }
 
+   public function daftar($id){
+       if (Auth::user() == null) {
+           return redirect('/login');
+       }else{
+
+           $loker = DB::table('header_loker')->where('id',$id)->first();
+           $user = DB::table('users')
+            ->join('profil_pribadi','users.id','=','profil_pribadi.id_user')
+            ->select('profil_pribadi.*')
+            ->where('id_user',Auth::user()->id)
+            ->first();
+
+            $dafatr = DB::table('body_loker')->insert([
+                'id_loker' => $loker->id,
+                'id_peserta' => $user->id,
+                'status' => 0
+            ]);
+
+            return view('suha.terimakasih');
+        }
+   }
+   
    public function edit_profile(){
     $profil_pribadi = DB::table('profil_pribadi')->where('id_user',Auth::user()->id)->first();
     if ($profil_pribadi == null) {
@@ -223,8 +245,10 @@ class ForClientController extends Controller
     return view('suha.shop-list');
    }
 
-   public function single_product(){
-    return view('suha.single-product');
+   public function single_product($id){
+    $loker = DB::table('header_loker')->where('id',$id)->first();
+
+    return view('suha.single-product',compact('loker'));
    }
 
    public function sub_catagory(){

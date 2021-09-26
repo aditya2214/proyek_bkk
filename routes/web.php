@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/logout', function () {
+    $lokers = DB::table('header_loker')->where('conf',1)->get();
     Auth::logout();
     
-    return view('suha.home');
+    return view('suha.home',compact('lokers'));
 });
 
 Auth::routes();
@@ -63,6 +64,8 @@ Route::get('/checkout-paypal','Suha\ForClientController@checkout_paypal');
 Route::get('/checkout','Suha\ForClientController@checkout');
 
 Route::get('/contact','Suha\ForClientController@contact');
+
+Route::get('/daftar/{id}','Suha\ForClientController@daftar');
 
 Route::get('/edit-profile','Suha\ForClientController@edit_profile');
 Route::post('/post-profil-pribadi','Suha\ForClientController@post_profil_pribadi');
@@ -114,7 +117,7 @@ Route::get('/shop-grid', 'Suha\ForClientController@shop_grid');
 
 Route::get('/shop-list','Suha\ForClientController@shop_list');
 
-Route::get('/single-product','Suha\ForClientController@single_product');
+Route::get('/single-product/{id}','Suha\ForClientController@single_product');
 
 Route::get('/sub-catagory','Suha\ForClientController@sub_catagory');
 

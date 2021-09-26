@@ -183,8 +183,8 @@
             <div class="col-12 col-md-6">
               <div class="card weekly-product-card">
                 <div class="card-body d-flex align-items-center">
-                  <div class="product-thumbnail-side"><a class="product-thumbnail d-block" href="{{ url ('single-product') }}"><img src="suha/dist/img/download.png" alt=""></a></div>
-                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product') }}">{{ $loker->basic}}</a>
+                  <div class="product-thumbnail-side"><a class="product-thumbnail d-block" href="{{ url ('single-product/'.$loker->id) }}"><img src="suha/dist/img/download.png" alt=""></a></div>
+                  <div class="product-description"><a class="product-title d-block" href="{{ url ('single-product/'.$loker->id) }}">{{ $loker->basic}}</a>
                     <p class="sale-price"><i class="lni lni-home"></i></i>{{$loker->tempat}}</p>
                     <div class="sale-price"><i class="lni lni-graduation"></i>{{$loker->pendidikan}}</div>
                     <div class="sale-price"><i class="lni lni-map"></i>{{$loker->lokasi}}</div>

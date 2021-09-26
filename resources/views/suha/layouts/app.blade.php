@@ -16,20 +16,20 @@
     <!-- Favicon-->
     <link rel="icon" href="suha/dist/img/logo-img/logo4.png">
     <!-- Apple Touch Icon-->
-    <link rel="apple-touch-icon" href="suha/dist/img/icons/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="suha/dist/img/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="suha/dist/img/icons/icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="suha/dist/img/icons/icon-180x180.png">
+    <link rel="apple-touch-icon" href="{{ asset ('suha/dist/img/icons/icon-96x96.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset ('suha/dist/img/icons/icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{ asset ('suha/dist/img/icons/icon-167x167.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset ('suha/dist/img/icons/icon-180x180.png') }}">
     <!-- CSS Libraries-->
-    <link rel="stylesheet" href="suha/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="suha/dist/css/animate.css">
-    <link rel="stylesheet" href="suha/dist/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="suha/dist/css/font-awesome.min.css">
-    <link rel="stylesheet" href="suha/dist/css/default/lineicons.min.css">
+    <link rel="stylesheet" href="{{ asset ('suha/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('suha/dist/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset ('suha/dist/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('suha/dist/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset ('suha/dist/css/default/lineicons.min.css') }}">
     <!-- Stylesheet-->
-    <link rel="stylesheet" href="suha/dist/style.css">
+    <link rel="stylesheet" href="{{ asset ('suha/dist/style.css') }}">
     <!-- Web App Manifest-->
-    <link rel="manifest" href="suha/dist/manifest.json">
+    <link rel="manifest" href="{{ asset ('suha/dist/manifest.json') }}">
     @livewireStyles
   </head>
   <body>
@@ -43,18 +43,18 @@
     @yield('content')
     <!-- All JavaScript Files-->
     
-    <script src="suha/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="suha/dist/js/jquery.min.js"></script>
-    <script src="suha/dist/js/waypoints.min.js"></script>
-    <script src="suha/dist/js/jquery.easing.min.js"></script>
-    <script src="suha/dist/js/owl.carousel.min.js"></script>
-    <script src="suha/dist/js/jquery.counterup.min.js"></script>
-    <script src="suha/dist/js/jquery.countdown.min.js"></script>
-    <script src="suha/dist/js/default/jquery.passwordstrength.js"></script>
-    <script src="suha/dist/js/default/dark-mode-switch.js"></script>
-    <script src="suha/dist/js/default/no-internet.js"></script>
-    <script src="suha/dist/js/default/active.js"></script>
-    <script src="suha/dist/js/pwa.js"></script>
+    <script src="{{ asset ('suha/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/jquery.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/default/jquery.passwordstrength.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/default/dark-mode-switch.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/default/no-internet.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/default/active.js') }}"></script>
+    <script src="{{ asset ('suha/dist/js/pwa.js') }}"></script>
     @livewireScripts
   </body>
 </html>
