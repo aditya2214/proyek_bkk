@@ -16,9 +16,20 @@
                 </b></p> 
             </div>
             <div class="float-right">
-                <button class="btn btn-secondary">Next Level <i class="fas fa-arrow-right"></i></button>
+                <form wire:submit.prevent="post_test">
+                    <label for="">Test</label><br>
+                    <div class="btn-group">
+                        @if($test2 != null)
+                        <input readonly type="text" wire:model="test" placeholder="Contoh : Pesikotes" class="form-control">
+                        @else
+                        <input type="text" wire:model="test" placeholder="Contoh : Pesikotes" class="form-control">
+                        @endif
+                        <button class="btn btn-success">OK</button>
+                    </div>
+                </form>
             </div>
             <br>
+            @if($test2 != null)
             <table class="table">
                 <thead>
                     <tr>
@@ -58,6 +69,7 @@
                     @endforeach
                 </tbody>
             </table>
+            @endif
         </div>
     </div>
 </div>

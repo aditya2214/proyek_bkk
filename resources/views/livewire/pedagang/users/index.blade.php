@@ -6,13 +6,25 @@
     <hr>
     <div class="card">
         <div class="card-body">
-            <table class="table">
+            <table class="table" style="font-size:10px;">
                 <thead>
                     <tr>
                         <th>Foto</th>
                         <th>User Name</th>
                         <th>Email</th>
-                        <th>Password</th>
+                        <th>No HP</th>
+                        <th>TTL</th>
+                        <th>Jenis-Kelamin</th>
+                        <th>Tinggi-Badan</th>
+                        <th>Berat-Badan</th>
+                        <th>Alamat</th>
+                        <th>Pendidikan</th>
+                        <th>Alumni</th>
+                        <th>Bahasa</th>
+                        <th>Skill</th>
+                        <th>Pengalaman</th>
+                        <th>Media Sosial</th>
+                        <th>Hobi</th>
                         <th>Role</th>
                         <th>@</th>
                     </tr>
@@ -23,12 +35,24 @@
                         <td>{{$user->foto}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->password}}</td>
+                        <td>{{$user->no_hp}}</td>
+                        <td>{{$user->tanggal_lahir }}</td>
+                        <td>{{$user->jenis_kelamin }}</td>
+                        <td>{{$user->tinggi_badan}}</td>
+                        <td>{{$user->berat_badan }}</td>
+                        <td>{{$user->alamat }}</td>
+                        <th>{{$user->pendidikan_terakhir}}</th>
+                        <td>{{$user->alumni }}</td>
+                        <td>{{$user->bahasa }}</td>
+                        <td>{{$user->keahlian }}</td>
+                        <td>{{$user->pengalaman }}</td>
+                        <td>{{$user->media_sosial }}</td>
+                        <td>{{$user->hobi }}</td>
                         <td>
                             @if($user->role > 0)
-                            <span class="badge badge-success">Akun Admin</span>
+                            <span class=" btn badge badge-success">Akun Admin</span>
                             @else
-                            <button wire:click="set_admin({{$user->id}})" class="btn btn-danger">Jadikan Admin</button>
+                            <span wire:click="set_admin({{$user->id}})" class="btn badge badge-primary">Jadikan Admin</span>
                             @endif
                         </td>
 

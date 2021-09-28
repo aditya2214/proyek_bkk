@@ -8,7 +8,8 @@ class ViewPeserta extends Component
 {
 
     public $idd;
-
+    public $test;
+    public $test2;
     public $name_search;
     public $date_search;
 
@@ -30,6 +31,10 @@ class ViewPeserta extends Component
         // dd($daftar_peserta);
 
         return view('livewire.pedagang.lowongan.view-peserta',compact('lokers','daftar_peserta'));
+    }
+
+    public function post_test(){
+        $this->test2 = $this->test;
     }
 
     public function handle_view_peserta($id){

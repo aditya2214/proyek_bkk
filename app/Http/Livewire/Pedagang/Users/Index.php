@@ -19,7 +19,12 @@ class Index extends Component
     public function render()
     {
 
-        $users = DB::table('users')->where('name','like','%'.$this->search.'%')->orwhere('email','like','%'.$this->search.'%')->get();
+        $users = DB::table('users')
+        ->leftjoin('profil_pribadi','users.id','profil_pribadi.id_user')
+        ->select('users.*','profil_pribadi.*')
+        ->where('users.name','like','%'.$this->search.'%')
+        ->orwhere('users.email','like','%'.$this->search.'%')
+        ->get();
 
         return view('livewire.pedagang.users.index',compact('users'));
     }
