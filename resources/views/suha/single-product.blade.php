@@ -70,7 +70,6 @@
         <!-- Rating & Review Wrapper-->
         <div class="row">
             <div class="col">
-
               <a href="{{ url ('daftar/'.$loker->id) }}" class="btn btn-primary form-control"><b>Daftar</b></a>
             </div>
         </div>

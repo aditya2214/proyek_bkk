@@ -25,6 +25,7 @@
 <body id="page-top">
 
     <!-- Page Wrapper -->
+    @include('sweetalert::alert')
     
     <livewire:pedagang.dashboard.index></livewire:pedagang.dashboard.index>
     <!-- Bootstrap core JavaScript-->

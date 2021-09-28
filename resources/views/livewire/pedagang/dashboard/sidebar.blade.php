@@ -22,6 +22,12 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    <li class="nav-item">
+        <a class="nav-link btn" wire:click="goto_users">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Users</span></a>
+    </li>
+
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link btn" wire:click="goto_upload_loker">

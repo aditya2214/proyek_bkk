@@ -1,4 +1,8 @@
 <div>
+    
+    @if($view_peserta == 1)
+        <livewire:pedagang.lowongan.view-peserta>    
+    @else
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><b>Upload Lowongan</b></h1>
         <button onClick="window.location.reload();" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-sync"></i> Refresh</button>
@@ -94,24 +98,23 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                <h3><b>Lowongan</b></h3>
-                <br>
-                @foreach($lokers as $loker)
+                    <h3><b>Lowongan</b></h3>
+                    <br>
+                    @foreach($lokers as $loker)
                     <div class="card weekly-product-card">
                         <div class="card-body d-flex align-items-center">
-                        <div class="product-thumbnail-side"><a class="product-thumbnail d-block" href="{{ url ('daftar_peserta/'.$loker->id) }}"><img src="suha/dist/img/download.png" alt=""></a></div>
-                        <div class="product-description"><a class="product-title d-block" href="{{ url ('daftar_peserta/'.$loker->id) }}" >{{ $loker->basic}}</a>
-                            <p class="sale-price"><i class="lni lni-home"></i></i>{{$loker->tempat}}</p>
-                            <div class="sale-price"><i class="lni lni-graduation"></i>{{$loker->pendidikan}}</div>
-                            <div class="sale-price"><i class="lni lni-map"></i>{{$loker->lokasi}}</div>
-                            @if($loker->conf == 1)
-                            <a href="" class="btn btn-success">Aktif</a>
-                            @else
-                            <a href="" class="btn btn-danger">Aktif</a>
-                            @endif
-                            <a wire:click="edit_loker({{$loker->id}})" class="btn btn-warning">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
-                        </div>
+                            <div class="product-thumbnail-side"><a class="product-thumbnail d-block" wire:click="view_peserta({{$loker->id}})"><img src="suha/dist/img/download.png" alt=""></a></div>
+                            <div class="product-description"><a class="product-title d-block" wire:click="view_peserta({{$loker->id}})"  >{{ $loker->basic}}</a>
+                                <p class="sale-price"><i class="lni lni-home"></i></i>{{$loker->tempat}}</p>
+                                <div class="sale-price"><i class="lni lni-graduation"></i>{{$loker->pendidikan}}</div>
+                                <div class="sale-price"><i class="lni lni-map"></i>{{$loker->lokasi}}</div>
+                                @if($loker->conf == 1)
+                                <a wire:click="nonaktifkan({{$loker->id}})" class="btn btn-success">Aktif</a>
+                                @else
+                                <a wire:click="aktifkan({{$loker->id}})" class="btn btn-danger">Nonaktif</a>
+                                @endif
+                                <a wire:click="edit_loker({{$loker->id}})" class="btn btn-warning">Edit</a>
+                            </div>
                         </div>
                     </div>
                     @endforeach
@@ -119,4 +122,5 @@
             </div>
         </div>
     </div>
+    @endif
 </div>

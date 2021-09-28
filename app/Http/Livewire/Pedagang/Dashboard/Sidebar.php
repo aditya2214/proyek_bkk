@@ -23,4 +23,10 @@ class Sidebar extends Component
         
         $this->emit('goto_shortcut',$query);
     }
+
+    public function goto_users(){
+        $query = 'users';
+        
+        $this->emit('goto_users',$query);
+    }
 }

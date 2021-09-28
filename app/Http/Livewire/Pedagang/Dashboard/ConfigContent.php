@@ -13,6 +13,7 @@ class ConfigContent extends Component
     public $listeners = [
         'goto_upload_loker' => 'handle_goto_upload_loker',
         'goto_shortcut' => 'handle_goto_shortcut',
+        'goto_users' => 'handle_goto_users',
     ];
 
     public function render()
@@ -25,6 +26,10 @@ class ConfigContent extends Component
     }
 
     public function handle_goto_shortcut($query){
+        $this->query = $query;
+    }
+
+    public function handle_goto_users($query){
         $this->query = $query;
     }
 }

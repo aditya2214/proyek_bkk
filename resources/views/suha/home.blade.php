@@ -6,7 +6,11 @@
      <div class="header-area" id="headerArea">
       <div class="container h-100 d-flex align-items-center justify-content-between">
         <!-- Logo Wrapper-->
-        <div class="logo-wrapper"><a href="{{url ('home') }}"><img src="suha/dist/img/core-img/logo-small.png" alt=""></a></div>
+        @if(Auth::user() == null)
+        <div class="logo-wrapper"><a href="{{url ('login') }}"><img src="{{ asset ('suha/dist/img/download.png') }}" style="width:60px;"  alt=""></a></div>
+        @else
+        <div class="logo-wrapper"><a href="{{url ('home') }}"><img src="{{ asset ('suha/dist/img/download.png') }}" style="width:60px;" alt=""></a></div>
+        @endif
         <!-- Search Form-->
         <div class="top-search-form">
           <form action="" method="">

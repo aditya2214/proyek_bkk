@@ -4,6 +4,8 @@ namespace App\Http\Livewire\Pedagang\Lowongan;
 
 use Livewire\Component;
 use DB;
+USE auth;
+use Alert;
 
 class UploadLowongan extends Component
 {
@@ -16,12 +18,37 @@ class UploadLowongan extends Component
     public $desk;
     public $spesifikasi;
     public $config_form = 0;
+    public $view_peserta = 0;
+    public $idd;
+
+    protected $lokerss;
+    protected $daftar_peserta;
+
+    protected $listeners = [
+        'back' => 'handle_back'
+    ];
+
+
     public function render()
     {
-        $lokers = DB::table('header_loker')->get();
+        
+        if ($this->lokerss != null) {
+            # code...
+            $lok = $this->lokerss;
+            $daftar_pesertas = $this->daftar_peserta;
 
-        return view('livewire.pedagang.lowongan.upload-lowongan',compact('lokers'));
+
+        }
+        
+        return view('livewire.pedagang.lowongan.upload-lowongan',[
+            'lokers' => $lokers = DB::table('header_loker')->get(),
+        ]);
+
     }
+
+    public function handle_back($vp){
+        $this->view_peserta = $vp;
+    }   
 
     public function resetInput(){
         $this->basic = null;
@@ -42,9 +69,11 @@ class UploadLowongan extends Component
             'batas_akhir' => $this->batas_akhir,
             'conf' => 1,
             'deskripsi' => $this->desk,
-            'spesifikasi' => $this->spesifikasi
+            'spesifikasi' => $this->spesifikasi,
+            'created_by' => Auth::user()->id
         ]);
 
+        Alert::success('berhasil', 'Anda Berhasil Posting Lowongan');
         $this->resetInput();
         
     }
@@ -58,7 +87,8 @@ class UploadLowongan extends Component
             'batas_akhir' => $this->batas_akhir,
             'conf' => 1,
             'deskripsi' => $this->desk,
-            'spesifikasi' => $this->spesifikasi
+            'spesifikasi' => $this->spesifikasi,
+            'created_by' => Auth::user()->id
         ]);
 
         $this->resetInput();
@@ -79,5 +109,25 @@ class UploadLowongan extends Component
         $this->batas_akhir = $edit_loker ->batas_akhir;
         $this->desk = $edit_loker ->deskripsi;
         $this->spesifikasi = $edit_loker ->spesifikasi;
+    }
+
+    public function nonaktifkan($id){
+        $post_loker = DB::table('header_loker')->where('id',$id)->update([
+            'conf' => 0,
+        ]);
+    }
+
+    public function aktifkan($id){
+        $post_loker = DB::table('header_loker')->where('id',$id)->update([
+            'conf' => 1,
+        ]);
+    }
+
+    public function view_peserta($id){
+
+        $this->view_peserta = 1;
+
+
+        $this->emit('view_peserta',$id);
     }
 }
